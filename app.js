@@ -17,10 +17,11 @@ const app = express();
 // });
 
 const db = mysql.createConnection({
-    host: process.env.DB_HOST || "localhost",
+    host: process.env.DB_HOST || "host.docker.internal",
     user: process.env.DB_USER || "root",
     password: process.env.DB_PASSWORD || "",
-    database: process.env.DB_NAME || "laundry_db"
+    database: process.env.DB_NAME || "laundry_db",
+    port: 3306
 });
 db.connect(err => {
     if (err) throw err;

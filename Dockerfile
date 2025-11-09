@@ -16,5 +16,4 @@ COPY . .
 # Tentukan port yang digunakan aplikasi
 EXPOSE 3000
 
-# Jalankan aplikasi
-CMD ["node", "app.js"]
+CMD ["node", "app.js"]
